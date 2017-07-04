@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:orientation="vertical">
+
+
+    <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50dip"
+            android:background="@color/schedule_week"
+            android:gravity="center_vertical">
+
+        <LinearLayout
+                android:id="@+id/btn_prev_month"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="0.2"
+                android:gravity="center"
+                android:orientation="vertical">
+
+            <TextView
+                    android:id="@+id/left_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/triangle06_states"
+                    android:duplicateParentState="true"
+                    android:text=""
+                    android:textSize="16.0dip"/>
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="0.6"
+                android:gravity="center"
+                android:orientation="vertical">
+
+            <TextView
+                    android:id="@+id/tv_month"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="xxxx年14月"
+                    android:textColor="#ffffffff"
+                    android:textSize="21.0dip"/>
+        </LinearLayout>
+
+        <LinearLayout
+                android:id="@+id/btn_next_month"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="0.2"
+                android:gravity="center"
+                android:orientation="vertical">
+
+            <TextView
+                    android:id="@+id/right_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/triangle05_states"
+                    android:duplicateParentState="true"
+                    android:text=""
+                    android:textSize="16.0dip"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="22.0dip"
+            android:background="@color/schedule_week">
+
+        <TextView
+                style="@style/weekName"
+                android:text="周日"/>
+
+        <TextView
+                style="@style/weekName"
+                android:text="周一"/>
+
+        <TextView
+                style="@style/weekName"
+                android:text="周二"/>
+
+        <TextView
+                style="@style/weekName"
+                android:text="周三"/>
+
+        <TextView
+                style="@style/weekName"
+                android:text="周四"/>
+
+        <TextView
+                style="@style/weekName"
+                android:text="周五"/>
+
+        <TextView
+                style="@style/weekName"
+                android:text="周六"/>
+    </LinearLayout>
+
+    <com.kayroc.scrollcalendarlib.custom.ScrollableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/scrollableLayout"
+            >
+
+        <RelativeLayout
+                android:id="@+id/rl_head"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#cdcdcd">
+            <com.kayroc.scrollcalendarlib.custom.MyGridView
+                    android:id="@+id/gridview"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#eeeeee"
+                    android:clickable="true"
+                    android:clipChildren="true"
+                    android:columnWidth="55.0dip"
+                    android:verticalSpacing="1.0dip"
+                    android:listSelector="@null"
+                    android:numColumns="7"
+                    android:stretchMode="columnWidth"
+                    />
+
+        </RelativeLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@color/schedule_week"
+                >
+        </LinearLayout>
+
+        <ListView
+                android:id="@+id/main_lv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:dividerHeight="2dp"
+                android:background="@color/list_bg"
+                >
+        </ListView>
+
+
+
+        <!--<android.support.v4.view.ViewPager
+                android:id="@+id/viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />-->
+
+
+    </com.kayroc.scrollcalendarlib.custom.ScrollableLayout>
+
+    <!--<RelativeLayout
+            android:id="@+id/main_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+        <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                <com.example.clander.custom.MyGridView
+                        android:id="@+id/gridview"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#00000000"
+                        android:clickable="true"
+                        android:clipChildren="true"
+                        android:columnWidth="55.0dip"
+                        android:horizontalSpacing="1.0dip"
+                        android:verticalSpacing="1.0dip"
+                        android:listSelector="@null"
+                        android:numColumns="7"
+                        android:paddingBottom="1.0dip"
+                        android:stretchMode="columnWidth"
+                        />
+
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp">
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </ScrollView>
+
+
+    </RelativeLayout>-->
+
+
+</LinearLayout>
